@@ -213,11 +213,7 @@ header {
     color: rgba(0,0,0,0.7);
   }
 
-  :focus {
-    outline-color: transparent;
-    outline-style: none;
 
-  }
 
   ::-webkit-input-placeholder {
     color: rgba(0,0,0,0.5);
@@ -242,6 +238,11 @@ header {
   :focus:-ms-input-placeholder {
     opacity: 0.5;
 
+  }
+
+  :focus {
+    outline-color: transparent;
+    outline-style: none;
   }
 
 }
