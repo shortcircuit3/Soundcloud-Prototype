@@ -22,4 +22,8 @@ function randomFromTo(from, to){
 		$('.bar:eq(' + p + ')').addClass('played');
 	}
 
+	$('.play-btn').click(function(){
+		
+	});
+
 })(jQuery);
