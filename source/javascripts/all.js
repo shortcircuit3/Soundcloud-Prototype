@@ -12,8 +12,8 @@ function randomFromTo(from, to){
 
 	// Append each single bars to div to create full wave
 	for ( var i = 0; i < waveLength; i++ ) {
-		var rand = randomFromTo(50, 100);
-		var mTop = 100 - rand;
+		var rand = randomFromTo(40, 80);
+		var mTop = 80 - rand;
 		$('.wave').append('<div class="bar" style="height:' + rand + 'px; margin-top: ' + mTop + 'px"></div>');
 	}
 
