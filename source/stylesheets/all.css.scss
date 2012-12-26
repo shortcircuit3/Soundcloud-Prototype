@@ -1,55 +1,84 @@
 @charset "utf-8";
 
+
+// Global Styles
+
 body {
-  background: #000;
-  text-align: center;
-  font-family: sans-serif; }
+  background: #F9F8F2;
+}
 
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
 
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
+.f-left {
+  float: left;
+}
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+.f-right {
+  float: right;
+}
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
+
+// Header
+
+header {
+  margin-top:40px;
+
+  .logo {
+    width: 54px;
+    height: 23px;
+    background: url('/images/logo.png') no-repeat;
   }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
+
+  .nav {
+    text-transform: uppercase;
+    font-weight: 700;
   }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
+}
+
+
+// Audio player
+
+.player {
+  height: 250px;
+  background:url('/images/bg.jpg') no-repeat top center;
+  color: #F9F8F2;
+
+  -webkit-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+          box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+}
+
+.wave {
+  height: 100px;
+  width: 100%;
+  display: table;
+
+  .bar {
+    width: 2px;
+    height:50px;
+    margin-right: 1px;
+    float: left;
+    display: table-cell;
+    vertical-align: bottom;
+    background:#fff;
   }
-  to {
-    -webkit-transform: scale(1);
+
+  .played {
+    background-image: linear-gradient(bottom, rgb(248,49,14) 0%, rgb(248,152,56) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(248,49,14) 0%, rgb(248,152,56) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(248,49,14) 0%, rgb(248,152,56) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(248,49,14) 0%, rgb(248,152,56) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(248,49,14) 0%, rgb(248,152,56) 100%);
+
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(248,49,14)),
+      color-stop(1, rgb(248,152,56))
+    );
   }
+
 }
