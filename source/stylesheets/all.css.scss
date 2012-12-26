@@ -45,12 +45,11 @@ $offwhite: #F9F8F2;
 }
 
 
-
-
 // Global Styles
 
 body {
   background: $offwhite;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -71,12 +70,15 @@ h1 {
   font-size: 36px;
   font-weight: 600;
   margin: 0;
+  letter-spacing: 0px;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.31);
 }
 
 h3 {
   font-size: 15px;
   font-weight: 600;
   margin: 0;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.31);
 }
 
 
@@ -120,6 +122,7 @@ header {
     border-radius: 30px;
     position: relative;
     margin-right: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.31);
 
     .play-icon {
       width: 0px;
@@ -130,6 +133,26 @@ header {
       position: absolute;
       top: 18px;
       left: 19px;
+
+    }
+
+  }
+
+  .meta {
+    font-weight: 300;
+    font-size: 15px;
+
+    .icon {
+      margin-right:14px;
+      opacity: 0.8;
+    }
+
+    .duration {
+      background: rgba(0,0,0,0.3);
+      border-radius: 2px;
+      padding: 5px 8px;
+      font-weight: 300;
+      opacity: 0.9
     }
 
   }

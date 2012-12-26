@@ -8,7 +8,7 @@ function randomFromTo(from, to){
 
 	// Global vars
 	var waveLength = 366;
-	var playedLength = 100;
+	var playedLength = 200;
 
 	// Append each single bars to div to create full wave
 	for ( var i = 0; i < waveLength; i++ ) {
