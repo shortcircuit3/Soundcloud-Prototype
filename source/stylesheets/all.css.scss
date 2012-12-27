@@ -281,8 +281,44 @@ header {
     width:30px;
     height: auto;
     border-radius: 15px;
+    cursor: pointer;
+
   }
 
+  img:hover {
+    z-index: 999;
+
+    -webkit-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+       -moz-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        -ms-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+         -o-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+            transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+         -o-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+
+  }
+
+}
+
+.comment-box {
+  font-size: 12px;
+  padding:5px 8px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 2px;
+  max-width: 200px;
+  height: auto;
+  position: relative;
+  font-weight: 300;
+  line-height: 1.4;
+  display: inline-block;
+
+  .name-text {
+    color: #F47C11;
+  }
 }
 
 

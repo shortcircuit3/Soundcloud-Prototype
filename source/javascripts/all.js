@@ -56,18 +56,51 @@ function randomFromTo(from, to){
 			return false;
 		});
 
+
 	});
 	
 
 
 	$(window).load(function () {
+		// Runs after player animation finishes
 		function loadTheRest(){
 			TweenMax.to($('header'), 0.4, {css:{opacity:"1"}, ease:Power4.easeOut });
 			TweenMax.to($('.comment-avatars'), 0.4, {css:{opacity:"1"}, ease:Power4.easeOut });
 			TweenMax.to($('.comment-field'), 0.4, {css:{opacity:"1"}, ease:Power4.easeOut });
 			$('body').removeClass('loading');
+
+			// Comment Pop up
+			$("body").on("mouseenter", ".comment-avatars img", function(){
+				// Get comment data
+				var name = $(this).data('name');
+				var comment = $(this).data('comment');
+				$('.comment-box').find('.name-text').text(name);
+				$('.comment-box').find('.comment-text').text(comment);
+				// Show the comment
+				var commentHeight = $('.comment-box').outerHeight();
+				var containerPos = $('.wave').offset(); // Get the container offset
+				var inputPos = $(this).offset(); // Get the images offset
+				relativeOffset = {
+					left: inputPos.left - containerPos.left // The relative position from the left of the container
+				};
+				var commentDist = relativeOffset.left; // A more sematic name
+				// Show the comment
+				$('.comment-box').css({
+					'bottom': (commentHeight - 1) + 'px',
+					'left': commentDist + 'px'
+				});
+			});
+
+			$("body").on("mouseleave", ".comment-avatars img", function(){
+				// Reset the comment
+				$('.comment-box').css('bottom', '-1px');
+			});
+
 		}
 		TweenMax.to($('.player'), 0.9, {css:{height:"267px"}, ease:Power4.easeOut, onComplete:loadTheRest });
+
+
+		
 		
 	});
 
