@@ -196,6 +196,36 @@ header {
 
 }
 
+
+// comment-avatars
+
+.comment-avatars {
+  position: relative;
+  margin-top: 5px;
+
+  img {
+    float: left;
+    position: absolute;
+    width:30px;
+    height: auto;
+    border-radius: 15px;
+    border-radius: 1px solid #000;
+  }
+
+}
+
+
+// Class to highligh bar
+
+.has-comment {
+  -moz-box-shadow:    inset 1px 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow:         inset 1px 0 1px rgba(255, 255, 255, 0.4);
+}
+
+
+// Comment form
+
 .comment-field {
   margin-top: 100px;
 
@@ -214,6 +244,8 @@ header {
   }
   
 }
+
+// Edit default focus style
 
 :focus {
   outline-color: transparent;
