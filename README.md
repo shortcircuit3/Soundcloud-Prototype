@@ -11,3 +11,11 @@ Project Init
 
     bundle install
     bundle exec middleman server
+
+Project Build
+-------------
+Build using [Middleman Github Pages](https://github.com/newcontext/middleman-gh-pages) gem
+
+    rake build
+    rake publish
+   
