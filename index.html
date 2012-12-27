@@ -17,12 +17,17 @@
 
   </head>
   
-  <body class="index">
+  <body class="index loading">
     <!-- Header -->
 <div class="container">
 	<header class="group">
 		<div class="logo f-left"></div>
-		<div class="nav f-right">Upload</div>
+		<div class="nav f-right">
+			<ul>
+				<li><a id="upload-btn" href="#upload">Upload</a></li>
+				<li><img class="avatar-lil" src="images/avatars/alex.jpg"></li>
+			</ul>
+		</div>
 	</header>
 </div>
 
@@ -67,7 +72,7 @@
 <!-- Comment Form -->
 <div class="container comment-field group">
 	<img class="avatar-big f-left" src="images/avatars/alex.jpg" />
-	<form class="f-left">
+	<form id="comment-form" class="f-left">
 		<input type="text" placeholder="Write a comment at 2.19">
 	</form>
 </div>
