@@ -87,7 +87,9 @@ h3 {
 }
 
 .avatar-lil {
-
+  width:30px;
+  height: auto;
+  border-radius: 15px;
 }
 
 // Header
@@ -104,6 +106,40 @@ header {
   .nav {
     text-transform: uppercase;
     font-weight: 700;
+
+    li {
+      list-style-type: none;
+      float: left;
+
+      .avatar-lil {
+        position: relative;
+        top: -5px;
+      }
+    }
+
+    #upload-btn {
+      opacity: 0.5;
+      font-weight: 900;
+      color: #000;
+      text-decoration: none;
+
+      -webkit-transition: all .2s ease;
+         -moz-transition: all .2s ease;
+          -ms-transition: all .2s ease;
+           -o-transition: all .2s ease;
+              transition: all .2s ease;
+    }
+
+    #upload-btn:hover {
+      opacity: 0.3;
+      background:rgba(255,255,255, 0.3);
+    }
+
+    li:first-child{
+      border-right: 1px solid rgba(0,0,0,0.3);
+      padding-right: 20px;
+      margin-right:  20px;
+    }
   }
 }
 
@@ -209,7 +245,6 @@ header {
     width:30px;
     height: auto;
     border-radius: 15px;
-    border-radius: 1px solid #000;
   }
 
 }

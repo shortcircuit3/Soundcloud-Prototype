@@ -27,13 +27,11 @@ function randomFromTo(from, to){
 	
 	// Loop through each image and highlight the relative sound bar showing it has a comment
 	$('.comment-avatars img').each(function(index) {
-
 		// Find the center of each image
 		var distanceFromLeft = $(this).css('left'); // Get distance from left
 		distanceFromLeft = distanceFromLeft.substring(0, distanceFromLeft.length - 2); // Remove 'px'
 		distanceFromLeft = parseInt(distanceFromLeft, 10); // Convert string to integer
 		avatarCenter = distanceFromLeft + 15; // Find center of avatar
-
 		// Find relative bar and add class
 		$('.wave').find('.bar').each(function(index){
 			var inputPos = $(this).offset(); // Get the bars position
@@ -41,13 +39,11 @@ function randomFromTo(from, to){
 				left: inputPos.left - containerPos.left // The relative position from the left of .wave
 			};
 			var barDist = relativeOffset.left; // A more sematic name
-
 			// Find the relative bar (+/- 1px)
 			if( Math.abs(avatarCenter - barDist) <= 1){
 				var id = $(this).attr('id'); // Get the ID
 				$('#' + id).addClass('has-comment'); // Add class '.has-comment' to the relative bar
 			}
-
 		});
 
 	});
