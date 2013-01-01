@@ -68,6 +68,7 @@ function randomFromTo(from, to){
 
 
 	$(window).load(function () {
+
 		// Runs after player animation finishes
 		function loadTheRest(){
 			TweenMax.to($('header'), 0.4, {css:{opacity:"1"}, ease:Power4.easeOut });
@@ -103,7 +104,13 @@ function randomFromTo(from, to){
 			});
 
 		}
-		TweenMax.to($('.player'), 0.9, {css:{height:"264px"}, ease:Power4.easeOut, onComplete:loadTheRest });
+		
+		//$('.player').css('height','219px');
+		if ($(window).width() >= 500) {
+			TweenMax.to($('.player'), 0.9, {css:{height:"264px"}, ease:Power4.easeOut, onComplete:loadTheRest });
+		} else {
+			TweenMax.to($('.player'), 0.9, {css:{height:"219px"}, ease:Power4.easeOut, onComplete:loadTheRest });
+		}
 		
 	});
 
@@ -111,8 +118,11 @@ function randomFromTo(from, to){
 
 		if ($(window).width() >= 500) {
 			position_comment_highlight();
+			$('.player').css('height','264px');
+		} else {
+			$('.player').css('height','219px');
 		}
-		
+
 	});
 
 })(jQuery);
