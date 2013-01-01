@@ -66,7 +66,7 @@ body {
 
   @media screen and (max-width: $break) {
     width: 100%;
-    padding:10px;
+    padding:20px;
   }
 }
 
@@ -125,6 +125,11 @@ header {
   .nav {
     text-transform: uppercase;
     font-weight: 700;
+
+    @media screen and (max-width: $break) {
+      position: relative;
+      top: 9px;
+    }
 
     ul {
       margin:0;
@@ -417,7 +422,7 @@ header {
   opacity: 0;
 
   @media screen and (max-width: $break) {
-    margin-top: 55px;
+    margin-top: 28px;
   }
 
   form {
