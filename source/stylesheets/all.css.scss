@@ -177,6 +177,7 @@ header {
 
   @media screen and (max-width:$break) {
     margin-top: 10px;
+    background:url('../images/bg-2x.jpg') no-repeat center center;
   }
 
   .player-info {
@@ -415,6 +416,7 @@ header {
   form {
     width:1024px;
     margin-top: 10px;
+    -webkit-appearance:none;
 
     @media screen and (max-width: $break) {
       width:75%;
@@ -428,6 +430,7 @@ header {
     padding:6px 0;
     width: 100%;
     color: rgba(0,0,0,0.7);
+    -webkit-appearance:none;
   }
   
 }
