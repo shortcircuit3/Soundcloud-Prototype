@@ -10,21 +10,8 @@ function randomFromTo(from, to){
 	var waveLength = 366;
 	var playedLength = 200;
 
-
-	// DOCUMENT.READY()
-	$(document).ready(function() {
-		// Append each single bars to div to create full wave
-		for ( var i = 0; i < waveLength; i++ ) {
-			var rand = randomFromTo(40, 80);
-			var mTop = 80 - rand;
-			$('.wave').append('<div class="bar" id="bar-' + i + '" style="height:' + rand + 'px; margin-top: ' + mTop + 'px"></div>');
-		}
-
-		// Added played class to bars
-		for ( var p = 0; p < playedLength; p++ ) {
-			$('.bar:eq(' + p + ')').addClass('played');
-		}
-
+	// Global functions
+	function position_comment_highlight() {
 		// Cache the .wave container position
 		var containerPos = $('.wave').offset();
 		
@@ -49,6 +36,25 @@ function randomFromTo(from, to){
 				}
 			});
 		});
+	}
+
+
+	// DOCUMENT.READY()
+	$(document).ready(function() {
+		// Append each single bars to div to create full wave
+		for ( var i = 0; i < waveLength; i++ ) {
+			var rand = randomFromTo(40, 80);
+			var mTop = 80 - rand;
+			$('.wave').append('<div class="bar" id="bar-' + i + '" style="height:' + rand + 'px; margin-top: ' + mTop + 'px"></div>');
+		}
+
+		// Added played class to bars
+		for ( var p = 0; p < playedLength; p++ ) {
+			$('.bar:eq(' + p + ')').addClass('played');
+		}
+
+		// Position comment highlight
+		position_comment_highlight();
 
 		// Return false after submit
 		$('#comment-form').submit(function() {
@@ -97,11 +103,12 @@ function randomFromTo(from, to){
 			});
 
 		}
-		TweenMax.to($('.player'), 0.9, {css:{height:"267px"}, ease:Power4.easeOut, onComplete:loadTheRest });
-
-
+		TweenMax.to($('.player'), 0.9, {css:{height:"264px"}, ease:Power4.easeOut, onComplete:loadTheRest });
 		
-		
+	});
+
+	$(window).resize(function() {
+		position_comment_highlight();
 	});
 
 })(jQuery);
