@@ -108,7 +108,11 @@ function randomFromTo(from, to){
 	});
 
 	$(window).resize(function() {
-		position_comment_highlight();
+
+		if ($(window).width() >= 500) {
+			position_comment_highlight();
+		}
+		
 	});
 
 })(jQuery);

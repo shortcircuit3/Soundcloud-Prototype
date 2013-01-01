@@ -210,6 +210,11 @@ header {
       top: 18px;
       left: 19px;
 
+      @media screen and (max-width:$break) {
+        top: 15px;
+        left: 17px;
+      }
+
     }
 
   }
