@@ -122,15 +122,19 @@ header {
     text-transform: uppercase;
     font-weight: 700;
 
+    ul {
+      margin:0;
+    }
+
     li {
       list-style-type: none;
       float: left;
 
-      .avatar-lil {
-        position: relative;
-        top: -5px;
-        cursor: pointer;
-      }
+      // .avatar-lil {
+      //   position: relative;
+      //   top: -5px;
+      //   cursor: pointer;
+      // }
     }
 
     #upload-btn {
