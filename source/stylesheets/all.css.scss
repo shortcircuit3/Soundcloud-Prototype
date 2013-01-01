@@ -208,13 +208,8 @@ header {
       border-width: 10.5px 0 10.5px 22px;
       border-color: transparent transparent transparent $offwhite;
       position: absolute;
-      top: 18px;
-      left: 19px;
-
-      @media screen and (max-width:$break) {
-        top: 15px;
-        left: 17px;
-      }
+      top:  15px;
+      left: 17px;
 
     }
 
