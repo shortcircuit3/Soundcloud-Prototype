@@ -1,8 +1,7 @@
 Dependencies
 ------------
-- Ruby 1.9.3
-- [RVM](https://rvm.io)
-- [Bundler](http://gembundler.com/)
+- middleman (~> 3.0.7)
+- middleman-gh-pages
 
 
 Project Init
